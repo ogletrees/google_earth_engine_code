@@ -26,7 +26,8 @@ var val_NDVI = greenest.select('NDVI')
 // Map over feature collection
 var meanBGndvi = val_NDVI.reduceRegions({
   collection: fc,
-  reducer: ee.Reducer.mean()
+  reducer: ee.Reducer.mean(),
+  scale: 30 // 30 meters for LandSat
 });
 
 // Print the first to check
