@@ -37,7 +37,7 @@ var meanBGndvi = val_NDVI.reduceRegions({
 });
 
 // Print the first to check, just the first 6 elements
-print(meanBGndvi.toList(6))
+// print(meanBGndvi.toList(6)) // List (Error) Computation timed out.
 
 // export to google drive
 Export.table.toDrive({
